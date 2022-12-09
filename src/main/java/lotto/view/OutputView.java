@@ -35,7 +35,7 @@ public class OutputView {
     }
 
     public void getReturn(double value) {
-        System.out.println("총 수익률은 " + value + "% 입니다.");
+        System.out.println("총 수익률은 " + value + "%입니다.");
     }
 
     public void winningNumber() {
