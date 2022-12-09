@@ -1,5 +1,7 @@
 package lotto.view;
 
+import lotto.domain.WinningMoney;
+
 import java.util.List;
 
 public class OutputView {
@@ -20,6 +22,20 @@ public class OutputView {
         for (int i = 0; i < mine.size(); i++) {
             System.out.println(mine.get(i));
         }
+    }
+
+    public void winingStatistic(int[] winningCheck) {
+        System.out.println("당첨 통계");
+        System.out.println("---");
+        System.out.println(WinningMoney.FIFTH.getPrint() + winningCheck[0] + "개");
+        System.out.println(WinningMoney.FOURTH.getPrint() + winningCheck[1] + "개");
+        System.out.println(WinningMoney.THIRD.getPrint() + winningCheck[2] + "개");
+        System.out.println(WinningMoney.SECOND.getPrint() + winningCheck[3] + "개");
+        System.out.println(WinningMoney.FIRST.getPrint() + winningCheck[4] + "개");
+    }
+
+    public void getReturn(double value) {
+        System.out.println("총 수익률은 " + value + "% 입니다.");
     }
 
     public void winningNumber() {
