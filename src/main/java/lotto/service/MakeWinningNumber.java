@@ -19,4 +19,9 @@ public class MakeWinningNumber {
         return winningNumber;
     }
 
+    public int makeBonusNumber() {
+        String input = Console.readLine();
+        int bonusNumber = Integer.parseInt(input);
+        return bonusNumber;
+    }
 }
