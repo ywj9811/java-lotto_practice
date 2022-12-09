@@ -9,8 +9,7 @@ import java.util.List;
 public class MakeWinningNumber {
     private List<Integer> winningNumber = new ArrayList<>();
 
-    public List<Integer> getWinningNumber() {
-        String input = Console.readLine();
+    public List<Integer> getWinningNumber(String input) {
         String[] split = input.split("");
         for (int i = 0; i < split.length; i++) {
             winningNumber.add(Integer.parseInt(split[i]));
@@ -19,9 +18,12 @@ public class MakeWinningNumber {
         return winningNumber;
     }
 
-    public int makeBonusNumber() {
-        String input = Console.readLine();
-        int bonusNumber = Integer.parseInt(input);
-        return bonusNumber;
+    public int makeBonusNumber(String input) {
+        try {
+            int bonusNumber = Integer.parseInt(input);
+            return bonusNumber;
+        } catch (Exception e) {
+            throw new IllegalArgumentException();
+        }
     }
 }
