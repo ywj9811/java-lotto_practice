@@ -1,5 +1,7 @@
 package lotto;
 
+import lotto.domain.ExceptionString;
+
 import java.util.List;
 
 public class Lotto {
@@ -12,12 +14,8 @@ public class Lotto {
 
     private void validate(List<Integer> numbers) {
         if (numbers.size() != 6) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ExceptionString.OVERSIZE.getPrint());
         }
-    }
-
-    public List<Integer> getNumbers() {
-        return numbers;
     }
     // TODO: 추가 기능 구현
 }
