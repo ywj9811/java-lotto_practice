@@ -24,6 +24,10 @@ public class WinningCheck {
         }
         return winningCount;
     }
+
+    public double returnOfMoney(int buyMoney, int getMoney) {
+        return (Math.round(getMoney/buyMoney*10)/10.0);
+    }
     /**
      * 3개 - 0
      * 4개 - 1
