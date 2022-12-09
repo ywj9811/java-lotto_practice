@@ -12,21 +12,32 @@ public class GameProcess {
     private InputView inputView = new InputView();
     private OutputView outputView = new OutputView();
     private int[] winningCount;
+    private List<Integer> winningNumber;
+    private int bonusNumber;
+    private List<List<Integer>> buyLottos;
+    private int buyMoney;
 
-    public void gameStart() {
+    public void buyLotto() {
         outputView.buyMoney();
-        int buyMoney = inputView.inputMoney();
+        buyMoney = inputView.inputMoney();
         outputView.howMany(buyMoney);
-        List<List<Integer>> buyLottos = makeBuyLottoNumbers.buyLotto(buyMoney);
+        buyLottos = makeBuyLottoNumbers.buyLotto(buyMoney);
         outputView.myLottos(buyLottos);
-        outputView.winningNumber();
-        List<Integer> winningNumber = makeWinningNumber.getWinningNumber(inputView.inputNumber());
-        outputView.bonusNumber();
-        int bonusNumber = makeWinningNumber.makeBonusNumber(inputView.inputNumber());
+    }
+    public void winningStatistic() {
         winningCount = winningCheck.winningCheck(buyLottos, winningNumber, bonusNumber);
         outputView.winingStatistic(winningCount);
         int getMoney = winningCheck.getMoney(winningCount);
         double returnOfMoney = winningCheck.returnOfMoney(buyMoney, getMoney);
         outputView.getReturn(returnOfMoney);
+    }
+    public void getWinningNumbers() {
+        outputView.winningNumber();
+        winningNumber = makeWinningNumber.getWinningNumber(inputView.inputNumber());
+    }
+
+    public void getBonusNumber() {
+        outputView.bonusNumber();
+        bonusNumber = makeWinningNumber.makeBonusNumber(inputView.inputNumber());
     }
 }
