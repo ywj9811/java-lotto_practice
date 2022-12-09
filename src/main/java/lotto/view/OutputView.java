@@ -1,5 +1,7 @@
 package lotto.view;
 
+import java.util.List;
+
 public class OutputView {
     private static final String BUYMONEY = "구입금액을 입력해 주세요.";
     private static final String HOWMANY = "개를 구매했습니다.";
@@ -11,7 +13,13 @@ public class OutputView {
     }
 
     public void howMany(int money) {
-        System.out.println(money + HOWMANY);
+        System.out.println(money/1000 + HOWMANY);
+    }
+
+    public void myLottos(List<List<Integer>> mine) {
+        for (int i = 0; i < mine.size(); i++) {
+            System.out.println(mine.get(i));
+        }
     }
 
     public void winningNumber() {
