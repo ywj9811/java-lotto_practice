@@ -5,7 +5,12 @@ import lotto.service.GameProcess;
 
 public class Application {
     public static void main(String[] args) {
-        GameController gameController = new GameController();
-        gameController.gameStart();
+        try {
+            GameController gameController = new GameController();
+            gameController.gameStart();
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return;
+        }
     }
 }
