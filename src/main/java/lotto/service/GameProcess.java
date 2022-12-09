@@ -24,6 +24,7 @@ public class GameProcess {
         outputView.bonusNumber();
         int bonusNumber = makeWinningNumber.makeBonusNumber(inputView.inputNumber());
         winningCount = winningCheck.winningCheck(buyLottos, winningNumber, bonusNumber);
+        outputView.winingStatistic(winningCount);
         int getMoney = winningCheck.getMoney(winningCount);
         double returnOfMoney = winningCheck.returnOfMoney(buyMoney, getMoney);
         outputView.getReturn(returnOfMoney);
