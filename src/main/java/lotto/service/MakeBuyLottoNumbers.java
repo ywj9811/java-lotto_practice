@@ -23,7 +23,7 @@ public class MakeBuyLottoNumbers {
     }
 
     public List<Integer> makeNumbers() {
-        List<Integer> lottoNumbers = Randoms.pickUniqueNumbersInRange(MIN_NUM, MAX_NUM, SIZE);
+        List<Integer> lottoNumbers = new ArrayList<>(Randoms.pickUniqueNumbersInRange(MIN_NUM, MAX_NUM, SIZE));
         Lotto lotto = new Lotto(lottoNumbers);
         return lottoNumbers;
     }
