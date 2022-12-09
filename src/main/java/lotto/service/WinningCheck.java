@@ -35,7 +35,7 @@ public class WinningCheck {
     }
 
     public double returnOfMoney(int buyMoney, int getMoney) {
-        return (Math.round(getMoney/buyMoney*10)/10.0);
+        return (Math.round(((double)getMoney/buyMoney*100)*10)/10.0);
     }
     /**
      * 3개 - 0
