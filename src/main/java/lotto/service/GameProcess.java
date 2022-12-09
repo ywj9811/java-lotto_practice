@@ -33,7 +33,7 @@ public class GameProcess {
     }
     public void getWinningNumbers() {
         outputView.winningNumber();
-        winningNumber = makeWinningNumber.getWinningNumber(inputView.inputNumber());
+        winningNumber = makeWinningNumber.getWinningNumber(inputView.inputWinningNumbers());
     }
 
     public void getBonusNumber() {
