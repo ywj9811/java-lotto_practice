@@ -25,6 +25,15 @@ public class WinningCheck {
         return winningCount;
     }
 
+    public int getMoney(int[] winningCount) {
+        int money = winningCount[0] * 5000 +
+                winningCount[1] * 50000 +
+                winningCount[2] * 1500000 +
+                winningCount[3] * 30000000 +
+                winningCount[4] * 2000000000;
+        return money;
+    }
+
     public double returnOfMoney(int buyMoney, int getMoney) {
         return (Math.round(getMoney/buyMoney*10)/10.0);
     }
