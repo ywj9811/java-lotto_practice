@@ -10,7 +10,7 @@ public class MakeWinningNumber {
     private List<Integer> winningNumber = new ArrayList<>();
 
     public List<Integer> getWinningNumber(String input) {
-        String[] split = input.split("");
+        String[] split = input.split(",");
         for (int i = 0; i < split.length; i++) {
             winningNumber.add(Integer.parseInt(split[i]));
         }
